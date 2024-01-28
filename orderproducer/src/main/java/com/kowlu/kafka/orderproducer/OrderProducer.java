@@ -28,7 +28,7 @@ public class OrderProducer {
 		KafkaProducer<String, Integer> kafkaProducer = new KafkaProducer<String, Integer>(
 				props);
 		ProducerRecord<String, Integer> producerRecord = new ProducerRecord<>(
-				"OrderTopic", "MacBook Pro", 10);
+				"OrderTopic", "Dell Latitude", 20);
 		try {
 			System.out.println("Sending Message....");
 			kafkaProducer.send(producerRecord, new OrderCallBack());
